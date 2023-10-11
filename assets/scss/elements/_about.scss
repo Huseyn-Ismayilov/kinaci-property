@@ -1,0 +1,257 @@
+.about {
+    .about_hero {
+        background-image: url(../images/home.png);
+        background-position: bottom;
+        background-size: cover;
+        height: 435px;
+        padding-top: 45px;
+        h2 {
+            font-size: 30px;
+        }
+    }
+    .content_box {
+        padding: 50px 0 30px;
+        .wrapper {
+            > div {
+                width: 50%;
+                &:first-child {
+                    padding-right: 70px;
+                }
+            }
+        }
+        h1 {
+            font-size: 30px;
+            font-weight: 600;
+        }
+        p {
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+    }
+    .image_box {
+        position: relative;
+        .logo {
+            position: absolute;
+            left: -130px;
+            top: 30px;
+            z-index: 1;
+            border-radius: 16px;
+            background-color: #fdf0ea;
+            width: 270px;
+            height: 210px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .image {
+            position: relative;
+            .items {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 42px;
+                padding-bottom: 15px;
+                position: absolute;
+                left: 14px;
+                bottom: 14px;
+                right: 14px;
+                background-color: #05284180;
+                color: white;
+                border-radius: 16px;
+                z-index: 1;
+                li {
+                    text-align: center;
+                    h2 {
+                        font-size: 55.851px;
+                        font-weight: 600;
+                        line-height: 1;
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.our_team {
+    text-align: center;
+    padding: 100px 0 150px;
+    .items {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 56px;
+        .details {
+            .name {
+                font-size: 24.364px;
+                font-weight: 600;
+            }
+            p {
+                font-size: 18.039px;
+                font-weight: 400;
+                margin-bottom: 13px;
+            }
+        }
+        .image {
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            img {
+                border-radius: 10px;
+                aspect-ratio: 41/47;
+                object-fit: cover;
+                transition: 0.1s;
+            }
+        }
+        .contact_info {
+            a {
+                display: block;
+                font-size: 18.039px;
+                padding-bottom: 4px;
+            }
+        }
+        li {
+            &:hover,
+            &:active {
+                .image {
+                    img {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .our_team {
+        .items {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .about {
+        .content_box {
+            .wrapper {
+                padding: 0 15px;
+                > div {
+                    width: 100%;
+                }
+            }
+            h1 {
+                margin-bottom: 24px;
+            }
+        }
+        .image_box {
+            .logo {
+                display: none;
+            }
+            .image {
+                img {
+                    margin: 0 -20px;
+                    min-width: calc(100% + 40px);
+                }
+                .items {
+                    flex-wrap: wrap;
+                    position: static;
+                    background-color: transparent;
+                    color: #052841;
+                    padding: 20px;
+                    li {
+                        width: 47%;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .our_team {
+        padding: 60px 0;
+        .items {
+            gap: 40px 10px;
+            .details {
+                .name {
+                    font-size: 20px;
+                }
+                p {
+                    font-size: 12px;
+                }
+            }
+            .image {
+                margin-bottom: 12px;
+            }
+            .contact_info {
+                a {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+.certificates {
+    padding-bottom: 70px;
+    margin-bottom: 70px;
+    .wrapper {
+        > div {
+            width: 50%;
+            &:first-child {
+                align-self: center;
+            }
+        }
+    }
+    .content {
+        margin-left: auto;
+        max-width: 70%;
+        padding-right: 90px;
+        h1 {
+            font-size: 30px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+    }
+    .slider_wrap {
+        position: relative;
+        overflow: hidden;
+        .pagination {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            svg {
+                width: 55px;
+                height: auto;
+            }
+            > div{
+                cursor: pointer;
+            }
+        }
+    }
+    .slider {
+        width: 100%;
+        margin-bottom: 48px;
+        img {
+            aspect-ratio: 30/40;
+            object-fit: cover;
+            border-radius: 10px;
+            background-color: #0528411a;
+        }
+    }
+}
+@media (max-width: 991px) {
+    .certificates {
+        padding: 0 15px;
+        overflow: hidden;
+        .wrapper {
+            > div {
+                width: 100%;
+            }
+        }
+        .content {
+            max-width: 100%;
+            padding-right: 0;
+            margin-bottom: 24px;
+        }
+        .slider_wrap {
+            overflow: visible;
+        }
+    }
+}

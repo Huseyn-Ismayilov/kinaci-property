@@ -1,0 +1,105 @@
+.our_services {
+    padding: 30px 0 60px;
+    .services_grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        .service_item {
+            a {
+                display: block;
+            }
+            .image {
+                margin-bottom: 20px;
+                overflow: hidden;
+                border-radius: 8px;
+                img {
+                    aspect-ratio: 37/21;
+                    object-fit: cover;
+                    width: 100%;
+                    border-radius: 8px;
+                    transition: 0.1s;
+                }
+            }
+            .details {
+                .category {
+                    color: var(--orange);
+                    margin-bottom: 10px;
+                }
+                .title {
+                    h3 {
+                        font-size: 14px;
+                        font-weight: 600;
+                    }
+                }
+            }
+            &:hover {
+                .image {
+                    img {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .our_services {
+        .services_grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+    }
+}
+@media (max-width: 576px) {
+    .our_services {
+        .services_grid {
+            grid-template-columns: 1fr;
+            gap: 30px;
+            .service_item {
+                .image {
+                    margin-bottom: 14px;
+                }
+            }
+        }
+    }
+}
+.service_detail {
+    padding: 30px 0;
+    .image {
+        margin-bottom: 20px;
+        img {
+            width: 100%;
+            border-radius: 20px;
+        }
+    }
+    .content {
+        p {
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+    }
+    &.termsOfUse {
+        .image {
+            margin: 0 !important;
+            img {
+                margin-bottom: 40px;
+            }
+        }
+        .content {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+    }
+}
+@media (min-width: 991px) {
+    .service_detail {
+        .image {
+            margin: 0 -40px;
+            margin-bottom: 50px;
+        }
+        .content {
+            padding: 0 20px;
+        }
+    }
+}

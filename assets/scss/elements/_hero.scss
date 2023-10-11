@@ -1,0 +1,306 @@
+.hero {
+    .slider {
+        position: relative;
+        overflow: hidden;
+        .arrows {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            .container {
+                position: relative;
+                height: 470px;
+            }
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 5;
+            cursor: pointer;
+            svg {
+                display: block;
+            }
+            &.prev_arrow {
+                left: 0;
+            }
+            &.next_arrow {
+                right: 0;
+            }
+        }
+        .swiper-button-disabled {
+            opacity: 0.4;
+        }
+    }
+    .swiper-slide {
+        position: relative;
+        height: 470px;
+        display: flex;
+        align-items: center;
+        background-position: center;
+        background-size: cover;
+        .container {
+            position: relative;
+            z-index: 2;
+        }
+        .content {
+            color: white;
+            text-align: center;
+            h1 {
+                font-size: 56px;
+                font-weight: 600;
+                line-height: 1.1;
+                max-width: 644px;
+                margin: 0 auto;
+                margin-bottom: 28px;
+            }
+            p {
+                max-width: 430px;
+                margin: 0 auto;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 1.8;
+            }
+        }
+        .bg_img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0.5;
+                background: #052841;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.5;
+            background: #052841;
+        }
+        &.slide1 {
+            background-image: url(../images/luxury-beach-house-with-sea-view-swimming-pool-terrace.png);
+        }
+    }
+    .property_filter {
+        margin-top: -117px;
+        position: relative;
+        z-index: 2;
+    }
+    .swiper-pagination {
+        bottom: 80px;
+    }
+    &.sub_hero {
+        padding: 20px 0;
+        background-color: #052841;
+        .container {
+            position: relative;
+        }
+        .callForm {
+            position: absolute;
+            right: -40px;
+            top: 0;
+            z-index: 3;
+            transform: translateX(100%);
+            width: 280px;
+            background-color: white;
+            border: 1px solid rgba(5, 40, 65, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            padding-top: 12px;
+            .icon {
+                display: block;
+                img {
+                    margin: 0 auto;
+                }
+            }
+            h3{
+                font-weight: 400;
+                margin-bottom: 16px;
+            }
+            p {
+                margin-bottom: 16px;
+            }
+            .btn{
+                width: 100%;
+            }
+        }
+        .property_filter {
+            margin-top: 0;
+        }
+    }
+    &.orange {
+        background-color: #FDF0EA;
+    }
+    &.contact{
+        position: relative;
+        height: 650px;
+        .map{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .contact_form0 {
+            margin-top: 45px;
+            z-index: 2;
+        }
+    }
+    .country_select {
+        width: fit-content;
+        min-width: 130px;
+        margin-bottom: 20px;
+        .dropdown-select {
+            border-radius: 10px;
+            box-shadow: unset !important;
+        }
+        .current {
+            font-weight: 600;
+            justify-content: center;
+            border-radius: 10px;
+            background-color: var(--orange);
+            color: white;
+            border: unset;
+            &::after {
+                filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7436%) hue-rotate(29deg)
+                    brightness(98%) contrast(114%);
+            }
+        }
+    }
+}
+.breadcrumb {
+    padding: 24px 0;
+    background-color: white;
+    ul {
+        display: flex;
+        align-items: center;
+        li {
+            a {
+                display: flex;
+                align-items: center;
+            }
+            &:not(:last-child) {
+                a {
+                    opacity: 0.5;
+                }
+            }
+            + li {
+                display: flex;
+                a {
+                    &::before {
+                        content: "";
+                        width: 16px;
+                        height: 16px;
+                        background-size: contain;
+                        background-image: url("data:image/svg+xml,%3Csvg width='14' height='15' viewBox='0 0 14 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.5'%3E%3Cpath d='M5.83333 10.4168L8.75 7.50016L5.83333 4.5835' stroke='%23052841' stroke-width='1.16667' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E%0A");
+                    }
+                }
+            }
+        }
+    }
+}
+.swiper-pagination {
+    .swiper-pagination-bullet {
+        width: 15px;
+        height: 15px;
+        background-color: white;
+        border-radius: 50%;
+        position: relative;
+        opacity: 1;
+        margin: 0 8px !important;
+        &::after {
+            content: "";
+            position: absolute;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            top: -5px;
+            border: 1px solid white;
+            border-radius: 50%;
+            opacity: 0;
+            transform: scale(0.6);
+            transition: 0.45s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        }
+    }
+    .swiper-pagination-bullet-active {
+        &::after {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}
+@media (max-width: 991px) {
+    .hero {
+        .swiper-slide {
+            height: 512px;
+            align-items: flex-start;
+            padding-top: 40px;
+            &.slide1 {
+                background-image: url(../images/hero-mobile.png);
+            }
+            .content {
+                max-width: 370px;
+                margin: 0 auto;
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+        .swiper-pagination {
+            bottom: 231px;
+        }
+        .slider {
+            .arrow {
+                top: 30%;
+                svg {
+                    width: 41px;
+                    height: 41px;
+                }
+                &.prev_arrow {
+                    left: 16px;
+                }
+                &.next_arrow {
+                    right: 16px;
+                }
+            }
+        }
+        .swiper-slide {
+            .content {
+                h1 {
+                    font-size: 34px;
+                }
+            }
+        }
+        .property_filter {
+            margin-top: -200px;
+            .country_select {
+                .dropdown-select .list {
+                    left: 0;
+                    right: auto;
+                }
+            }
+        }
+    }
+}

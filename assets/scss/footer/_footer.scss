@@ -1,0 +1,204 @@
+.site_footer {
+    background-color: #052841;
+    color: white;
+    .foot_main {
+        padding: 80px 0 66px;
+        margin: 0 -20px;
+        .col {
+            width: 25%;
+            padding: 0 20px;
+        }
+    }
+    .foot_bottom {
+        padding: 30px 0;
+    }
+    .brand {
+        p {
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+    }
+    .logo {
+        margin-bottom: 20px;
+    }
+    .wrapper {
+        justify-content: space-between;
+    }
+    h4.title {
+        font-size: 22px;
+        font-weight: 500;
+        position: relative;
+        padding-bottom: 16px;
+        margin-bottom: 20px;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 30px;
+            height: 4px;
+            border-radius: 10px;
+            background-color: var(--orange);
+        }
+    }
+    .menu {
+        padding-left: 16px;
+        li {
+            list-style: disc;
+        }
+        a {
+            display: block;
+            padding: 4px 0;
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+    }
+    .links {
+        display: inline-flex;
+        align-items: center;
+        gap: 30px;
+    }
+    .copyright {
+        p {
+            font-weight: 300;
+        }
+    }
+    .subs_form {
+        .form_wrap {
+            margin: 0;
+            margin-bottom: 6px;
+        }
+        .btn {
+            border-radius: 10px;
+            padding: 15px 30px;
+        }
+        input {
+            height: 50px;
+            margin-bottom: 11px;
+            border-radius: 10px;
+        }
+        p {
+            font-size: 13px;
+            font-weight: 400;
+            opacity: 0.45;
+        }
+    }
+    .social_media {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        svg {
+            display: block;
+        }
+        a:hover {
+            svg {
+                path {
+                    fill: #282828;
+                }
+            }
+        }
+    }
+    .contact_info {
+        .item {
+            margin-bottom: 24px;
+            display: flex;
+            gap: 16px;
+            svg {
+                flex-shrink: 0;
+                margin-top: 2px;
+                color: white;
+            }
+        }
+    }
+}
+.needHelp {
+    background-color: #fdf0ea;
+    padding: 50px 0;
+    .wrapper {
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+    }
+    h1{
+        margin-bottom: 12px;
+    }
+    .btn_group {
+        display: inline-flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 35px;
+        .secondary_btn {
+            background-color: white;
+            &:hover {
+                background-color: var(--orange);
+            }
+        }
+    }
+}
+@media (min-width: 991px) {
+    .site_footer .menu .title::after {
+        display: none;
+    }
+}
+@media (max-width: 991px) {
+    .site_footer {
+        padding-top: 20px;
+        // .wrapper {
+        //     justify-content: center;
+        //     flex-direction: column;
+        //     gap: 25px;
+        // }
+        .foot_main {
+            .col {
+                width: 50%;
+            }
+            .wrapper {
+                row-gap: 40px;
+            }
+        }
+        .menu {
+            gap: 5px;
+            .nav_link {
+                padding: 6px 10px;
+            }
+        }
+    }
+    .needHelp {
+        .btn_group {
+            gap: 16px;
+            .btn {
+                padding: 10px 13px;
+                svg {
+                    width: 13px;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .site_footer {
+        .foot_main {
+            padding: 30px 0;
+            margin: 0;
+            .col {
+                width: 100%;
+                padding: 0;
+            }
+        }
+        .menu {
+            gap: 5px;
+            .nav_link {
+                padding: 6px 10px;
+            }
+        }
+        .foot_bottom {
+            padding: 20px 0;
+            .wrapper {
+                justify-content: center;
+                gap: 12px;
+            }
+        }
+    }
+}

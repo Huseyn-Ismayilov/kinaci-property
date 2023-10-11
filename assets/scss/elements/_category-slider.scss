@@ -1,0 +1,49 @@
+.category_slider {
+    overflow: hidden;
+    padding: 50px 0;
+    .slider {
+        .item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            display: block;
+            transition: 0.15s;
+
+            &:hover {
+                transform: scale(0.97);
+                .bg_img {
+                    img {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+        .text {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            padding: 40px 0;
+            text-align: center;
+            color: white;
+            z-index: 1;
+            h3 {
+                font-size: 24px;
+                font-weight: 600;
+            }
+            p {
+                font-size: 15px;
+            }
+        }
+        .bg_img {
+            img {
+                transition: 0.15s;
+            }
+        }
+    }
+}
+@media (max-width:991px) {
+    .category_slider {
+        padding: 30px 0;
+    }
+}
