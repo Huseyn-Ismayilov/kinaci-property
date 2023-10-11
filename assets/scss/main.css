@@ -1973,7 +1973,7 @@ header .contact_info .make_appointment {
 .hero .property_filter {
   margin-top: -117px;
   position: relative;
-  z-index: 6;
+  z-index: 3;
 }
 .hero .swiper-pagination {
   bottom: 80px;
