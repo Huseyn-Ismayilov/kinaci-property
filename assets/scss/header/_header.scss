@@ -285,6 +285,79 @@ header {
         }
     }
 }
+.popup {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    transition: 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    .overlay {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: #000;
+        z-index: 101;
+        opacity: 0.2;
+        transition: opacity 0.1s;
+    }
+    .inner {
+        top: 50px;
+        position: relative;
+        z-index: 102;
+        background-color: white;
+        border-radius: 10px;
+        width: 100%;
+        max-width: 692px;
+        height: fit-content;
+        padding: 41px 111px;
+        margin: 0 auto;
+        transform: scale(0.7);
+        position: relative;
+        transition: 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .close_btn {
+        position: absolute;
+        right: -20px;
+        top: -20px;
+        width: 58px;
+        height: 58px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: var(--orange);
+        cursor: pointer;
+        &:hover {
+            background-color: #df5f1f;
+        }
+    }
+    .form_element {
+        width: 100%;
+        margin-bottom: 16px;
+        .group {
+            gap: 12px;
+        }
+    }
+    .send_btn {
+        width: 100%;
+        padding: 18px;
+    }
+    &.opened {
+        opacity: 1;
+        visibility: visible;
+        .inner {
+            transform: scale(1);
+        }
+    }
+}
 .mobile_menu {
     position: fixed;
     top: 0;
@@ -491,6 +564,12 @@ header {
                     height: auto;
                 }
             }
+        }
+    }
+    .popup {
+        padding: 0 10px;
+        .inner {
+            padding: 20px;
         }
     }
 }

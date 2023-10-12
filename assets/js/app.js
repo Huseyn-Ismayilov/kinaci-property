@@ -396,3 +396,19 @@ $('.comments_list .list .item .showMore').click(function () {
 	}
 });
 
+
+
+$('.popup .overlay').click(function () {
+	$(this).parent().removeClass('opened');
+});
+
+
+$('.popup .close_btn').click(function () {
+	$(this).parents().removeClass('opened');
+});
+
+
+$('header .contact_info .make_appointment').click(function () {
+	$('.popup.make_appointment').addClass('opened');
+	return false
+});
